@@ -68,7 +68,7 @@
   My custom styles:
   Add your scss files below to structure your project styles
 */
-
+@import "global/mellifico";
 // Modules
 @import "modules/navigation";
 @import "modules/footer";

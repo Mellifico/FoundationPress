@@ -57,6 +57,13 @@ var PATHS = {
     // Motion UI
     'assets/components/motion-ui/motion-ui.js',
 
+    // Isotope + ImagesLoaded
+    'assets/components/isotope/dist/isotope.pkgd.min.js',
+    'assets/components/imagesloaded/imagesloaded.pkgd.min.js',
+
+    // FitText
+    'assets/components/fittext/fittext.js',
+
     // Include your own custom scripts (located in the custom folder)
     'assets/javascript/custom/*.js',
   ],

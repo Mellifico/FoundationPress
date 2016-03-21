@@ -21,7 +21,7 @@
 		<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon.png">
 		<?php wp_head(); ?>
 	</head>
-	<body <?php body_class(); ?>>
+	<body <?php body_class('ligatures'); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
 
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) : ?>
@@ -36,24 +36,37 @@
 		<div class="title-bar" data-responsive-toggle="site-navigation">
 			<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
 			<div class="title-bar-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				<a class="serif-italic" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 			</div>
 		</div>
 
-		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
-			<div class="top-bar-left">
-				<ul class="menu">
-					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-				</ul>
-			</div>
-			<div class="top-bar-right">
-				<?php foundationpress_top_bar_r(); ?>
+		<div data-sticky-container>
+  		<div data-sticky data-options="marginTop:0;" style="width:100%">
+    
+			<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
+				<div class="top-bar-left">
+					<ul class="menu">
+						<li class="home"><a class="serif-italic" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+					</ul>
+				</div>
+				<div class="top-bar-right">
+					<ul class="menu">
+						<li><select style="margin-bottom:0;" name="seals-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+						<option value=""><?php echo esc_attr( __( 'Seals' ) ); ?></option> 
+						  <?php wp_get_archives( 'type=alpha&format=option' ); ?>
+						</select></li>
+						<li><?php languages_list(); ?></li>
+					</ul>
+					<?php foundationpress_top_bar_r(); ?>
 
-				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
-					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
-				<?php endif; ?>
-			</div>
-		</nav>
+					<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
+						<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
+					<?php endif; ?>
+				</div>
+			</nav>
+		</div>
+		</div>
+
 	</header>
 
 	<section class="container">

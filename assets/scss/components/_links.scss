@@ -6,3 +6,6 @@
 [data-whatinput="touch"] a:focus, button:focus {
   outline: none;
 }
+.sticky a.active {
+	background-color: $black;
+}

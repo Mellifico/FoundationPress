@@ -44,5 +44,9 @@ require_once( 'library/custom-nav.php' );
 /** Change WP's sticky post class */
 require_once( 'library/sticky-posts.php' );
 
+// PG GUIDE miscellaneous tuttifruttiuseful funktions
+require_once('library/init.php');
+require_once('library/medias.php');
+
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
