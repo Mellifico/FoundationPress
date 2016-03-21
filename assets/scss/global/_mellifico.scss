@@ -1,0 +1,143 @@
+.bg-light {background-color:$white;}
+.bg-light-min {background-color:$base2;}
+.bg-dark {background-color:$black;}
+.bg-red {background-color:$red;}
+.bg-orange {background-color:$orange;}
+.bg-blue {background-color:$blue;}
+.bg-violet {background-color:$violet;}
+.bg-magenta {background-color:$magenta;}
+.bg-green {background-color:$green;}
+.bg-cyan {background-color:$cyan;}
+.bg-white {background-color: #fff;}
+.bg-tissu-a {
+  background: transparent url("../assets/bg-chest/background-pattern01.png");
+}
+.alpha {
+  opacity: 1;
+}
+.alpha:hover {
+  opacity: 0.7;
+}
+.alphalayer::after {
+  content:"";
+  position: absolute;
+  z-index:0;
+  display: block;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,70,0.8);
+}
+.top-centered  {
+    position: absolute;
+    z-index: 100;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+}
+.centered  {
+    position: absolute;
+    z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.block {
+  display: block;
+  width: 100%;
+}
+.padded {
+  padding: $global-padding;
+}
+#fattext, #fattext-bis {
+  font-family: $special-font-family;
+  display:block;
+  width: 100%;
+  line-height: 1.115;
+}
+.typo-large {
+  font-size: $large-font-size;
+}
+.text-white {
+  color: $base2!important;
+}
+.txt-shadow {
+  text-shadow: 1rem 0px 0px $black, -1rem 0px 0px $black;
+}
+.FlexEmbed {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index:0;
+}
+
+.FlexEmbed:before {
+  content: "";
+  display: block;
+  width: 100%;
+}
+
+.FlexEmbed--1by3:before {
+  padding-bottom: 120%;
+}
+.FlexEmbed--1by4:before {
+  padding-bottom: 150%;
+}
+.FlexEmbed--3by1:before {
+  padding-bottom: 33.33333%;
+}
+.FlexEmbed--4by1:before {
+  padding-bottom: 22%;
+}
+.FlexEmbed--5by1:before {
+  padding-bottom: 15%;
+}
+.FlexEmbed--2by1:before {
+  padding-bottom: 50%;
+}
+
+.FlexEmbed--16by9:before {
+  padding-bottom: 56.25%;
+}
+
+.FlexEmbed--4by3:before {
+  padding-bottom: 75%;
+}
+
+.FlexEmbed--4by4:before {
+  padding-bottom: 100%;
+}
+/**
+ * Requires: suitcss/flex-embed
+ */
+
+.CoverImage {
+  background-position: 50%;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  -webkit-background-size:  cover;
+       -o-background-size:  cover;
+          background-size:  cover;
+}
+.ligatures {
+	font-feature-settings: "liga", "dlig", "swsh", "clig", "calt";
+}
+div[role="main"].isotope-wrapper {
+
+}
+.seal {
+
+}
+.seal a {
+	display: block;
+	width: 100%;
+}
+.seal.stamp a {
+}
+.seal a:hover {
+}
+.seal:not(.stamp) a img {
+	width: 100%;
+  max-width: 100%;
+}
